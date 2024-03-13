@@ -23,6 +23,7 @@ public class HelloWorldSwing {
         contPane.add(label);
         contPane.setBackground(colore1);
         label.setForeground(colore2);
+
         frame.setVisible(true);
     }
 }
