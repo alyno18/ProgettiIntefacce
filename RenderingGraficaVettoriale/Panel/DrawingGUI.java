@@ -1,4 +1,4 @@
-package RenderingGraficaVettoriale.Panel;
+package Panel;
 
 import java.awt.BorderLayout;
 import java.awt.Container;

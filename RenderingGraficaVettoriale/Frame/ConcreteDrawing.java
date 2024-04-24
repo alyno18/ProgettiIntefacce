@@ -1,4 +1,4 @@
-package RenderingGraficaVettoriale.Frame;
+package Frame;
 
 import java.awt.Color;
 import java.awt.Graphics;

@@ -1,4 +1,4 @@
-package RenderingGraficaVettoriale.Panel;
+package Panel;
 
 import java.awt.Color;
 import java.awt.Graphics;
