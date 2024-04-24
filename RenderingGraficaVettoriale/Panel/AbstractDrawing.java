@@ -1,4 +1,4 @@
-package Panel;
+package RenderingGraficaVettoriale.Panel;
 
 import java.awt.Graphics;
 

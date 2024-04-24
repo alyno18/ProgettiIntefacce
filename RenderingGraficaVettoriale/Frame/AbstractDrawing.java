@@ -1,4 +1,4 @@
-package Frame;
+package RenderingGraficaVettoriale.Frame;
 
 import java.awt.Graphics;
 
