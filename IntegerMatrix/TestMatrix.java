@@ -13,7 +13,7 @@ public class TestMatrix {
             JOptionPane.showMessageDialog(null,"Soltanto valori interi possono essere inseriti.", "Input Error",JOptionPane.ERROR_MESSAGE);
         }
         return value;
-    }// end method insertIntegerDialog(String message)
+    }
 
     public static int readInt(String message) {
         int value = Integer.MAX_VALUE;
@@ -24,7 +24,7 @@ public class TestMatrix {
                 rightInsert = true;
         }
         return value;
-    }// end method readInt(String message)
+    }
 
     public static void main(String[] args) {
 
