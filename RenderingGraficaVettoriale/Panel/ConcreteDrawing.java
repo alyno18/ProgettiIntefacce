@@ -31,4 +31,14 @@ public class ConcreteDrawing extends AbstractDrawing{
     public int getDrawingHeight() {
         return ((int)Math.round(rect.getY() + rect.getHeight() + 0.5));
     }
+
+    @Override
+    protected void rescaleDrawing() {
+        this.rect.setRect(
+                this.rect.getX() * this.scaleFactor / this.previousScaleFactor,
+                this.rect.getY() * this.scaleFactor / this.previousScaleFactor,
+                this.rect.getWidth() * this.scaleFactor / this.previousScaleFactor,
+                this.rect.getHeight() * this.scaleFactor / this.previousScaleFactor);
+    }
+
 }

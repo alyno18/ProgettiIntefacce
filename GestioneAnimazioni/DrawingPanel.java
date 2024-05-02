@@ -1,10 +1,13 @@
-package Panel;
+package GestioneAnimazioni;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JPanel;
 
-public class DrawingPanel extends JPanel{
+public class DrawingPanel extends JPanel implements ActionListener{
     private final static int HORIZONTAL_GAP = 10;
     private final static int VERTICAL_GAP = 10;
 
@@ -13,12 +16,10 @@ public class DrawingPanel extends JPanel{
     public DrawingPanel(AbstractDrawing dw) {
         super();
         this.dw = dw;
-        updatePanelPreferredSize();
     }
 
     public void setDrawing(AbstractDrawing dw) {
         this.dw = dw;
-        updatePanelPreferredSize();
     }
 
     @Override
@@ -27,17 +28,13 @@ public class DrawingPanel extends JPanel{
         dw.draw(g);
     }
 
-    private void updatePanelPreferredSize() {
-        setPreferredSize(new Dimension(dw.getDrawingWidth() + HORIZONTAL_GAP, dw.getDrawingHeight() + VERTICAL_GAP));
-    }
-
     @Override
     public Dimension getPreferredSize() {
         return new Dimension(dw.getDrawingWidth() + HORIZONTAL_GAP, dw.getDrawingHeight() + VERTICAL_GAP);
     }
 
-    public void setScaleFactor(double scaleFactor) {
-        dw.setScaleFactor(scaleFactor);
+    public void actionPerformed(ActionEvent e) {
+        this.dw.updateDrawing();
+        this.repaint();
     }
-
 }
