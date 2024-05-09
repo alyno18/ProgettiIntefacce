@@ -66,7 +66,7 @@ public class DrawingPanel extends JPanel implements MouseInputListener{
             this.colorArray[n] = getRandomColor();
     }
 
-    public void setGridUnit() {
+    private void setGridUnit() {
         this.uX = (double)(getWidth() - 2 * X_MARGIN) / (double)NUM_COLUMNS;
         this.uY = (double)(getHeight() - 2 * Y_MARGIN) / (double)NUM_ROWS;
     }
@@ -136,7 +136,9 @@ public class DrawingPanel extends JPanel implements MouseInputListener{
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        // Insert here our drawing
+        
+        setGridUnit();
+
         Graphics2D g2d = (Graphics2D)g;
         if (this.showGrid){
             paintGrid(g2d);
